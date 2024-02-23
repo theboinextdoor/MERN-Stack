@@ -1,0 +1,23 @@
+{
+  "name": "node-js-self-learning",
+  "version": "1.0.0",
+  "description": "this is crash course of Node js ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node httpmodule.js",
+    "dev": "nodemon httpmodule"
+  },
+  "keywords": [
+    "nodejs",
+    "javascript"
+  ],
+  "author": "Faraaz Ashraf <cman55245@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "cli-color": "^2.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
