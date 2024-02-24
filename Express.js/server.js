@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'))
 
 //! Routing 
-app.use(mainRouter);
+app.use('/',mainRouter);
 
 app.listen(PORT , () => 
     console.log(`Listining on Port ${PORT}`)

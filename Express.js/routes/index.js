@@ -1,5 +1,10 @@
 const router = require('express').Router();
 const path = require('path')
+const apiKeyMiddleware = require('../middlewares/apiKey')
+
+
+//! if you want to add the middleware on every route
+// router.use(apiKeyMiddleware); 
 
 
 router.get('/', (req, res) => {
@@ -28,6 +33,21 @@ router.get('/downlaod', (req, res) => {
 
     //? download method is used to download the file from the server. 
     res.download(path.resolve(__dirname) + '../views/about.ejs')
+})
+
+
+//! NOTE:- if you want to add multiple middleware then pass the middleware in an array as a parameter
+router.get('/api/products', apiKeyMiddleware, (req, res) => {
+    res.json([
+        {
+            id: '123',
+            name: 'chrome',
+        },
+        {
+            id: '1234',
+            name: 'firefox'
+        }
+    ])
 })
 
 
