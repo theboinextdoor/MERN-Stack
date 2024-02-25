@@ -27,6 +27,9 @@ router.get('/about', (req, res) => {
     res.render('about', data)
 })
 
+
+
+
 router.get('/downlaod', (req, res) => {
     res.set('Content-Type', 'text/html')
     res.status(200)
@@ -37,18 +40,20 @@ router.get('/downlaod', (req, res) => {
 
 
 //! NOTE:- if you want to add multiple middleware then pass the middleware in an array as a parameter
-router.get('/api/products', apiKeyMiddleware, (req, res) => {
-    res.json([
-        {
-            id: '123',
-            name: 'chrome',
-        },
-        {
-            id: '1234',
-            name: 'firefox'
-        }
-    ])
-})
+// router.get('/api/products', apiKeyMiddleware, (req, res) => {
+//     res.json([
+//         {
+//             id: '123',
+//             name: 'chrome',
+//         },
+//         {
+//             id: '1234',
+//             name: 'firefox'
+//         }
+//     ])
+// })
+
+
 
 
 
