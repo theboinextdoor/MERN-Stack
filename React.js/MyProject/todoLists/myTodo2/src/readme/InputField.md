@@ -1,0 +1,1 @@
+<!-- when we work inside the form then we don't have to add EventListner on button, instead we can add onSubmit Event Listner on form and we don't even need to discribe the type of Button because by default the type button will be Submit Button which will submit the form  -->
